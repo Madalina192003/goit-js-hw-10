@@ -1,4 +1,3 @@
-// index.js
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 
 const breedSelect = document.getElementById('breed-select');
@@ -32,8 +31,9 @@ const loadCatInfo = async breedId => {
     loader.style.display = 'block';
     catInfo.style.display = 'none';
     const cat = await fetchCatByBreed(breedId);
-    document.getElementById('cat-image').src = cat.url;
-    // corectare denumirii ID-ului
+    document.getElementById('cat-image').src =
+      'https://api.thecatapi.com/v1/breeds';
+
     document.getElementById('cat-name').textContent = cat.breeds[0].name;
 
     document.getElementById('cat-description').textContent =

@@ -19,7 +19,7 @@ export async function fetchCatByBreed(breedId) {
   try {
     console.log(`Fetching cat by breed ID: ${breedId}`);
     const response = await axios.get(
-      `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`
+      `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}&limit=1`
     );
     console.log('Cat info response:', response.data);
     return response.data;

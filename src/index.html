@@ -13,8 +13,6 @@
       href="https://cdn.jsdelivr.net/npm/notiflix@3.2.5/dist/notiflix-3.2.5.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="index.js"></script>
-    <script type="module" src="cat-api.js"></script>
   </head>
   <body>
     <h1>Cat Finder</h1>
@@ -22,13 +20,16 @@
     <p id="loader" class="hidden">Loading...</p>
     <p id="error" class="hidden">Something went wrong!</p>
     <div id="cat-info" class="cat-info hidden">
-      <h2 id="breed-name"></h2>
-      <img id="cat-image" alt="Cat Image" />
+      <h2 id="breed-name">Breed name</h2>
+      <img
+        id="cat-image"
+        alt="Cat Image"
+        src=" https://api.thecatapi.com/v1/images/search"
+      />
       <p id="cat-description"></p>
       <p id="cat-temperament"></p>
     </div>
-
-    <script type="module" src="index.js"></script>
-    <script type="module" src="cat-api.js"></script>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./cat-api.js"></script>
   </body>
 </html>
