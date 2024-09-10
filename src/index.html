@@ -15,21 +15,28 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Cat Finder</h1>
-    <select id="breed-select" class="breed-select"></select>
-    <p id="loader" class="hidden">Loading...</p>
-    <p id="error" class="hidden">Something went wrong!</p>
-    <div id="cat-info" class="cat-info hidden">
-      <h2 id="breed-name">Breed name</h2>
-      <img
-        id="cat-image"
-        alt="Cat Image"
-        src=" https://api.thecatapi.com/v1/images/search"
-      />
-      <p id="cat-description"></p>
-      <p id="cat-temperament"></p>
+    <div class="container">
+      <h1>Cat Finder</h1>
+      <!-- Select pentru selectarea rasei -->
+      <select id="breed-select" class="breed-select"></select>
+      <!-- Loader afișat în timpul încărcării -->
+      <p id="loader" class="hidden">Loading...</p>
+      <!-- Mesaj de eroare -->
+      <p id="error" class="hidden">Something went wrong!</p>
+      <!-- Informații despre pisică -->
+      <div id="cat-info" class="cat-info hidden">
+        <img id="cat-image" />
+        <div class="cat-info-item">
+          <h2 id="breed-name"></h2>
+          <p id="cat-description"></p>
+          <p id="cat-temperament"></p>
+        </div>
+      </div>
     </div>
-    <script type="module" src="./index.js"></script>
-    <script type="module" src="./cat-api.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/slim-select@1.26.1/dist/slimselect.min.js"
+      defer
+    ></script>
+    <script type="module" src="./index.js" defer></script>
   </body>
 </html>
